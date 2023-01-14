@@ -3,13 +3,19 @@ import pymysql
 
 def mysqlconnect():
     # To connect MySQL database
-    conn = pymysql.connect(
-        host='localhost',
-        user='root',
-        password="12345678",
-        db='AutomativeDatabse',
-    )
-
+    try:
+        conn = pymysql.connect(
+            host='localhost',
+            user='root',
+            password="Ahmed12345@",
+            db='AutomativeDatabse',
+        )
+    except:
+        conn = pymysql.connect(
+            host='localhost',
+            user='root',
+            password="Ahmed12345@",
+        )
     return conn
 
     # cur = conn.cursor()
