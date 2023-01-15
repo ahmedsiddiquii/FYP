@@ -16,10 +16,12 @@ import os
 import random
 from PyQt5.QtGui import QMovie
 import icons_rc
-
 from API import *
-
 from DataModel.healthCare import data
+
+count = 0
+domain_name = "hospitalManagement"
+direction = None
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -76,6 +78,7 @@ class Ui_MainWindow(object):
         self.label_22.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background:transparent;")
         self.label_22.setObjectName("label_22")
+        # self.label_22.setText("yes")
         self.horizontalLayout_35.addWidget(self.label_22)
         self.frame_57 = QtWidgets.QFrame(self.frame_56)
         self.frame_57.setStyleSheet("background:transparent;")
@@ -946,14 +949,44 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.create_cards()
+        # self.create_cards()
         self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    def create_screen(self):
 
-    def create_cards(self):
-            for i,value in enumerate(data['Domain']['hospitalManagement']):
-                    print(value)
-                    entity = data['Domain']['hospitalManagement'][value]
+        global count
+
+
+        for i, value in enumerate(data['Domain']):
+                domain = data["Domain"][value]
+                        # print(direction)
+                for j, entities in enumerate(domain):
+                        self.label_4.setText(entities)
+                                # print(domain)
+                        count += 1
+                        yield self.create_cards(domain[entities])
+
+
+        return
+
+    def back_screen(self):
+
+            global count
+
+            for i, value in enumerate(data['Domain']):
+                    domain = data["Domain"][value]
+                    # print(direction)
+                    for j, entities in enumerate(domain):
+
+
+                            self.label_4.setText(entities)
+                            count -= 1
+                            yield self.create_cards(domain[entities])
+    def create_cards(self,domain):
+            for i,value in enumerate(domain):
+                    # print(value)
+
+                    entity = domain[value]
                     self.frame_10 = QtWidgets.QFrame(self.scrollAreaWidgetContents)
                     self.frame_10.setMinimumSize(QtCore.QSize(520, 411))
                     self.frame_10.setMaximumSize(QtCore.QSize(1621777, 1621777))
@@ -982,6 +1015,7 @@ class Ui_MainWindow(object):
                     self.label_5.setFont(font)
                     self.label_5.setObjectName("label_5")
                     self.label_5.setText(value)
+                    # print(value)
 
                     self.horizontalLayout_4.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter)
                     self.verticalLayout_7.addWidget(self.frame_12)
@@ -1009,9 +1043,9 @@ class Ui_MainWindow(object):
                             self.checkBox.setObjectName("checkBox")
                             # print(attribute)
                             # print(entity[attribute])
-                            # if entity[attribute]['checkable']==False:
-                            #         self.checkBox.setDisabled(True)
-                            # self.checkBox.setText(attribute+f" : {attribute['data_type']}")
+                            if entity[attribute]['checkable']==False:
+                                    self.checkBox.setDisabled(True)
+                            self.checkBox.setText(attribute+f" : {entity[attribute]['data_type']}")
                             self.horizontalLayout_5.addWidget(self.checkBox)
                             self.verticalLayout_8.addWidget(self.frame_13)
                     # self.frame_14 = QtWidgets.QFrame(self.scrollAreaWidgetContents_2)
@@ -1031,7 +1065,6 @@ class Ui_MainWindow(object):
                     self.verticalLayout_7.addWidget(self.scrollArea_2)
                     self.gridLayout.addWidget(self.frame_10, 0, i, 1, 1)
                     self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -1041,7 +1074,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setText(_translate("MainWindow", "Password"))
         self.label_3.setText(_translate("MainWindow", "Forget password?"))
         self.pushButton.setText(_translate("MainWindow", "Login"))
-        self.label_4.setText(_translate("MainWindow", "Health Care Shipment &Delivery"))
+        # self.label_4.setText(_translate("MainWindow", data["domain"]))
         try:
                 self.label_5.setText(_translate("MainWindow", "Health Care Delivery Role"))
                 self.checkBox.setText(_translate("MainWindow", "From Date"))
@@ -1094,6 +1127,7 @@ class Ui_MainWindow(object):
         self.plainTextEdit_2.setPlainText(_translate("MainWindow", "IMAGE UML\n"
 ""))
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -1108,17 +1142,23 @@ class MainWindow(QMainWindow):
         self.ui.frame_6.hide()
         self.button_connection()
         initializeDB()
-
+        self.screen_generator=self.ui.create_screen()
+        self.back_screen_generator=self.ui.back_screen()
+    def call_dbscreen(self):
+            print("db screen")
+            self.ui.stackedWidget.setCurrentWidget(self.ui.page_4)
     def button_connection(self):
             self.ui.pushButton.clicked.connect(self.callAuth)
 
+            self.ui.pushButton_3.clicked.connect(lambda:self.call_next(True))
+
+            self.ui.pushButton_2.clicked.connect(lambda: self.call_next(False))
     def set_shadow(self):
         shadow = QGraphicsDropShadowEffect(xOffset=1, yOffset=1)
         shadow.setBlurRadius(80)
 
         # adding shadow to the label
         self.ui.frame_3.setGraphicsEffect(shadow)
-
     def callAuth(self):
         username = self.ui.lineEdit.text().casefold()
         password = self.ui.lineEdit_2.text()
@@ -1131,21 +1171,26 @@ class MainWindow(QMainWindow):
                 msg.setInformativeText('Username or Password is wrong')
                 msg.setWindowTitle("Error")
                 msg.exec_()
+    def call_next(self, direction_temp):
+            global count, domain_name, direction
+            direction = direction_temp
 
+            if count == len(data["Domain"][domain_name]) and direction == True:
+                    self.call_dbscreen()
+            else:
+                    if direction == True:
+                        next(self.screen_generator)
+                    elif count > 0:
 
-
-
-
-
-
-
-
+                        next(self.back_screen_generator)
+            print(count)
+    def call_back(self):
+            global count
     def close(self):
         pass
 
 
-from sys import exit as sysExit
-
+# from sys import exit as sysExit
 if __name__ == "__main__":
     import sys
 
