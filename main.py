@@ -23,6 +23,7 @@ count = 0
 domain_name = "hospitalManagement"
 direction = None
 data_list = []
+back_exist=False
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -961,12 +962,13 @@ class Ui_MainWindow(object):
 
         for i, value in enumerate(data['Domain']):
                 domain = data["Domain"][value]
-                # print(domain)
-                        # print(direction)
+                # #print(domain)
+                        # #print(direction)
                 for j, entities in enumerate(domain):
                         self.label_4.setText(entities)
-                                # print(domain)
+                                # #print(domain)
                         count += 1
+                        print(count,"==count is")
                         yield self.create_cards(domain[entities])
 
 
@@ -977,20 +979,38 @@ class Ui_MainWindow(object):
             global count,data_list
             key_value=""
             count -= 1
+
+            print(count,"==count is")
             for t in data_list[count]:
                     key_value=t
                     break
-            print(data_list[count],"piaza2")
+            #print(data_list[count],"piaza2")
             self.label_4.setText(key_value)
 
-            print(data_list[count],"piaza")
-            print(key_value)
-            yield self.create_cards(data_list[count][key_value])
+            #print(data_list[count],"piaza")
+            #print(key_value)
+            return self.create_cards(data_list[count][key_value])
+    def next_screen_normal(self):
+
+            global count,data_list
+            key_value=""
+            count += 1
+
+            print(count,"==count is")
+            for t in data_list[count]:
+                    key_value=t
+                    break
+            #print(data_list[count],"piaza2")
+            self.label_4.setText(key_value)
+
+            #print(data_list[count],"piaza")
+            #print(key_value)
+            return self.create_cards(data_list[count][key_value])
     def create_cards(self,domain):
-            print(domain)
+            #print(domain)
             self.labels=[]
             for i,value in enumerate(domain):
-                    # print(value)
+                    # #print(value)
                     # data_list.append([temp])
                     entity = domain[value]
 
@@ -1025,7 +1045,7 @@ class Ui_MainWindow(object):
                     self.label_5.setText(value)
                     self.labels.append(self.label_5)
                     # temp[self.label_4.text()][self.label_5.text()] = {}
-                    # print(value)
+                    # #print(value)
 
                     self.horizontalLayout_4.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter)
                     self.verticalLayout_7.addWidget(self.frame_12)
@@ -1052,25 +1072,25 @@ class Ui_MainWindow(object):
                             self.horizontalLayout_5.setObjectName("horizontalLayout_5")
                             self.checkBox = QtWidgets.QCheckBox(self.frame_13)
                             self.checkBox.setObjectName("checkBox")
-                            # print(attribute)
-                            # print(entity[attribute])
+                            # #print(attribute)
+                            # #print(entity[attribute])
                             self.checkBox.setText(attribute + f" : {entity[attribute]['data_type']}")
                             temp_buttons.append(self.checkBox)
                             # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()] = {}
 
+                            try:
+                                    if entity[attribute]['checkable']==False:
+                                            self.checkBox.setDisabled(True)
 
-                            if entity[attribute]['checkable']==False:
-                                    self.checkBox.setDisabled(True)
-
-                                    # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()]["checkable"] = False
-                                    # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()][
-                                    #         "data_type"] = entity[attribute]['data_type']
-                            else:
+                            except:
                                     pass
-                                    # temp[self.label_4.text()text][self.label_5.text()][self.checkBox.text()][
-                                    #         "checkable"] = True
-                                    # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()][
-                                    #         "data_type"] = entity[attribute]['data_type']
+                            try:
+                                    if entity[attribute]['checked'] == True:
+                                            self.checkBox.setChecked(True)
+
+                            except Exception as e:
+                                    print(e)
+                                    pass
                             self.horizontalLayout_5.addWidget(self.checkBox)
                             self.verticalLayout_8.addWidget(self.frame_13)
                     self.buttons.append(temp_buttons)
@@ -1078,8 +1098,8 @@ class Ui_MainWindow(object):
                     self.verticalLayout_7.addWidget(self.scrollArea_2)
                     self.gridLayout.addWidget(self.frame_10, 0, i, 1, 1)
                     self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-            # print(temp)
-            # print(data_list)
+            # #print(temp)
+            # #print(data_list)
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -1158,11 +1178,11 @@ class MainWindow(QMainWindow):
         self.button_connection()
         initializeDB()
         self.screen_generator=self.ui.create_screen()
-        self.back_screen_generator=self.ui.back_screen()
+        # self.back_screen_generator=self.ui.back_screen()
         self.ui.buttons=[]
         self.ui.labels=[]
     def call_dbscreen(self):
-            print("db screen")
+            #print("db screen")
             self.ui.stackedWidget.setCurrentWidget(self.ui.page_4)
     def button_connection(self):
             self.ui.pushButton.clicked.connect(self.callAuth)
@@ -1189,21 +1209,24 @@ class MainWindow(QMainWindow):
                 msg.setWindowTitle("Error")
                 msg.exec_()
     def call_next(self, direction_temp):
-            global count, domain_name, direction,data_list
+            global count, domain_name, direction,data_list, back_exist
             direction = direction_temp
-
             temp = {self.ui.label_4.text(): {}}
             for l in self.ui.labels:
                     temp[self.ui.label_4.text()][l.text()] = {}
             for k,key in enumerate(temp[self.ui.label_4.text()]):
                     for b in self.ui.buttons[k]:
-                            temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]] = {"checkable":False,"data_type":b.text().split(" : ")[1]}
+                            temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]] = {"checkable":b.isEnabled(),"checked":False,"data_type":b.text().split(" : ")[1]}
                             if b.isChecked()==True:
-                                    temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]]["checkable"]=True
+                                    temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]]["checked"]=True
 
-            print(temp)
-            print(len(self.ui.buttons),"===buttons")
-            data_list.append(temp)
+            #
+            #print(len(self.ui.buttons),"===buttons")
+            try:
+                data_list[count]=temp
+            except:
+                data_list.append(temp)
+            print(len(data_list))
             self.ui.labels = []
             self.ui.buttons=[]
 
@@ -1211,12 +1234,15 @@ class MainWindow(QMainWindow):
                     self.call_dbscreen()
             else:
                     if direction == True:
-
-                        next(self.screen_generator)
+                        if back_exist==False:
+                                next(self.screen_generator)
+                        else:
+                                self.ui.next_screen_normal()
                     elif count > 0:
+                        back_exist=True
+                        self.ui.back_screen()
 
-                        next(self.back_screen_generator)
-            # print(count)
+            # #print(count)
     def call_back(self):
             global count
     def close(self):
