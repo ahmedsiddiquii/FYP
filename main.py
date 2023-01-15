@@ -22,6 +22,8 @@ from DataModel.healthCare import data
 count = 0
 domain_name = "hospitalManagement"
 direction = None
+data_list = []
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -959,6 +961,7 @@ class Ui_MainWindow(object):
 
         for i, value in enumerate(data['Domain']):
                 domain = data["Domain"][value]
+                # print(domain)
                         # print(direction)
                 for j, entities in enumerate(domain):
                         self.label_4.setText(entities)
@@ -971,22 +974,26 @@ class Ui_MainWindow(object):
 
     def back_screen(self):
 
-            global count
+            global count,data_list
+            key_value=""
+            count -= 1
+            for t in data_list[count]:
+                    key_value=t
+                    break
+            print(data_list[count],"piaza2")
+            self.label_4.setText(key_value)
 
-            for i, value in enumerate(data['Domain']):
-                    domain = data["Domain"][value]
-                    # print(direction)
-                    for j, entities in enumerate(domain):
-
-
-                            self.label_4.setText(entities)
-                            count -= 1
-                            yield self.create_cards(domain[entities])
+            print(data_list[count],"piaza")
+            print(key_value)
+            yield self.create_cards(data_list[count][key_value])
     def create_cards(self,domain):
+            print(domain)
+            self.labels=[]
             for i,value in enumerate(domain):
                     # print(value)
-
+                    # data_list.append([temp])
                     entity = domain[value]
+
                     self.frame_10 = QtWidgets.QFrame(self.scrollAreaWidgetContents)
                     self.frame_10.setMinimumSize(QtCore.QSize(520, 411))
                     self.frame_10.setMaximumSize(QtCore.QSize(1621777, 1621777))
@@ -1008,6 +1015,7 @@ class Ui_MainWindow(object):
                     self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_12)
                     self.horizontalLayout_4.setObjectName("horizontalLayout_4")
                     self.label_5 = QtWidgets.QLabel(self.frame_12)
+
                     font = QtGui.QFont()
                     font.setPointSize(18)
                     font.setBold(True)
@@ -1015,6 +1023,8 @@ class Ui_MainWindow(object):
                     self.label_5.setFont(font)
                     self.label_5.setObjectName("label_5")
                     self.label_5.setText(value)
+                    self.labels.append(self.label_5)
+                    # temp[self.label_4.text()][self.label_5.text()] = {}
                     # print(value)
 
                     self.horizontalLayout_4.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter)
@@ -1029,6 +1039,7 @@ class Ui_MainWindow(object):
                     self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
                     self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
                     self.verticalLayout_8.setObjectName("verticalLayout_8")
+                    temp_buttons=[]
                     for j,attribute in enumerate(entity):
                             self.frame_13 = QtWidgets.QFrame(self.scrollAreaWidgetContents_2)
                             self.frame_13.setMaximumSize(QtCore.QSize(16777215, 50))
@@ -1043,28 +1054,32 @@ class Ui_MainWindow(object):
                             self.checkBox.setObjectName("checkBox")
                             # print(attribute)
                             # print(entity[attribute])
+                            self.checkBox.setText(attribute + f" : {entity[attribute]['data_type']}")
+                            temp_buttons.append(self.checkBox)
+                            # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()] = {}
+
+
                             if entity[attribute]['checkable']==False:
                                     self.checkBox.setDisabled(True)
-                            self.checkBox.setText(attribute+f" : {entity[attribute]['data_type']}")
+
+                                    # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()]["checkable"] = False
+                                    # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()][
+                                    #         "data_type"] = entity[attribute]['data_type']
+                            else:
+                                    pass
+                                    # temp[self.label_4.text()text][self.label_5.text()][self.checkBox.text()][
+                                    #         "checkable"] = True
+                                    # temp[self.label_4.text()][self.label_5.text()][self.checkBox.text()][
+                                    #         "data_type"] = entity[attribute]['data_type']
                             self.horizontalLayout_5.addWidget(self.checkBox)
                             self.verticalLayout_8.addWidget(self.frame_13)
-                    # self.frame_14 = QtWidgets.QFrame(self.scrollAreaWidgetContents_2)
-                    # self.frame_14.setMaximumSize(QtCore.QSize(16777215, 50))
-                    # self.frame_14.setStyleSheet("background-color: rgb(235, 235, 235);\n"
-                    #                             "")
-                    # self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
-                    # self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
-                    # self.frame_14.setObjectName("frame_14")
-                    # self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_14)
-                    # self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-                    # self.checkBox_2 = QtWidgets.QCheckBox(self.frame_14)
-                    # self.checkBox_2.setObjectName("checkBox_2")
-                    # self.horizontalLayout_6.addWidget(self.checkBox_2)
-                    # self.verticalLayout_8.addWidget(self.frame_14)
+                    self.buttons.append(temp_buttons)
                     self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
                     self.verticalLayout_7.addWidget(self.scrollArea_2)
                     self.gridLayout.addWidget(self.frame_10, 0, i, 1, 1)
                     self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+            # print(temp)
+            # print(data_list)
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -1144,6 +1159,8 @@ class MainWindow(QMainWindow):
         initializeDB()
         self.screen_generator=self.ui.create_screen()
         self.back_screen_generator=self.ui.back_screen()
+        self.ui.buttons=[]
+        self.ui.labels=[]
     def call_dbscreen(self):
             print("db screen")
             self.ui.stackedWidget.setCurrentWidget(self.ui.page_4)
@@ -1172,18 +1189,34 @@ class MainWindow(QMainWindow):
                 msg.setWindowTitle("Error")
                 msg.exec_()
     def call_next(self, direction_temp):
-            global count, domain_name, direction
+            global count, domain_name, direction,data_list
             direction = direction_temp
+
+            temp = {self.ui.label_4.text(): {}}
+            for l in self.ui.labels:
+                    temp[self.ui.label_4.text()][l.text()] = {}
+            for k,key in enumerate(temp[self.ui.label_4.text()]):
+                    for b in self.ui.buttons[k]:
+                            temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]] = {"checkable":False,"data_type":b.text().split(" : ")[1]}
+                            if b.isChecked()==True:
+                                    temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]]["checkable"]=True
+
+            print(temp)
+            print(len(self.ui.buttons),"===buttons")
+            data_list.append(temp)
+            self.ui.labels = []
+            self.ui.buttons=[]
 
             if count == len(data["Domain"][domain_name]) and direction == True:
                     self.call_dbscreen()
             else:
                     if direction == True:
+
                         next(self.screen_generator)
                     elif count > 0:
 
                         next(self.back_screen_generator)
-            print(count)
+            # print(count)
     def call_back(self):
             global count
     def close(self):
