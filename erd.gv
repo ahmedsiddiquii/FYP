@@ -1,0 +1,35 @@
+// ERD
+digraph {
+	agreement
+	agreement_item
+	agreement_type
+	category
+	health_care_good_offering
+	health_care_offering
+	health_care_service_offering
+	insured_party
+	orders
+	organization_role
+	party
+	party_relations
+	party_role
+	person_party
+	person_role
+	products
+	provider_offering
+	user
+	orders -> agreement_item_id [constraint=orders_ibfk_1]
+	orders -> agreement_id [constraint=orders_ibfk_2]
+	orders -> agreement_type_id [constraint=orders_ibfk_3]
+	orders -> party_relations_id [constraint=orders_ibfk_4]
+	orders -> party_role_id [constraint=orders_ibfk_5]
+	orders -> party_id [constraint=orders_ibfk_6]
+	person_party -> person_role_id [constraint=person_party_ibfk_1]
+	person_party -> insured_party_id [constraint=person_party_ibfk_2]
+	person_party -> organization_role_id [constraint=person_party_ibfk_3]
+	products -> category_id [constraint=products_ibfk_1]
+	products -> health_care_offering_id [constraint=products_ibfk_2]
+	products -> health_care_service_offering_id [constraint=products_ibfk_3]
+	products -> health_care_good_offering_id [constraint=products_ibfk_4]
+	products -> provider_offering_id [constraint=products_ibfk_5]
+}
