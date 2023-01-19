@@ -1,11 +1,12 @@
 data = {
   "Domain": {
     "hospitalManagement": {
-      "person/party": {
+      "person_party": {
         "person_role": {
-          "person_role_id": {
+          "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "indivitual_health_care": {
             "data_type": "bool",
@@ -27,7 +28,8 @@ data = {
         "insured_party": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "insured_indivitual": {
             "data_type": "bool",
@@ -41,7 +43,8 @@ data = {
         "organization_role": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "Health Care Provider Organization": {
             "data_type": "datetime",
@@ -55,7 +58,7 @@ data = {
             "data_type": "varchar(255)",
             "checkable": False
           },
-          "group": {
+          "groupp": {
             "data_type": "varchar(255)",
             "checkable": False
           },
@@ -93,7 +96,8 @@ data = {
         "agreement_item": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "item_seq_id": {
             "data_type": "int",
@@ -131,7 +135,8 @@ data = {
         "agreement": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "patient_provider_agreement": {
             "data_type": "int",
@@ -183,7 +188,8 @@ data = {
         "agreement_type": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "type_id": {
             "data_type": "int",
@@ -197,7 +203,8 @@ data = {
         "party_relations": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "from_date": {
             "data_type": "datetime",
@@ -215,7 +222,8 @@ data = {
         "party_role": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "role_id": {
             "data_type": "datetime",
@@ -225,7 +233,8 @@ data = {
         "party": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "party_id": {
             "data_type": "datetime",
@@ -245,7 +254,8 @@ data = {
         "category": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "category_id": {
             "data_type": "int",
@@ -290,7 +300,8 @@ data = {
         "health_care_offering": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "health_care_offering_id": {
             "data_type": "int",
@@ -336,7 +347,8 @@ data = {
         "health_care_service_offering": {
           "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "procedure_id": {
             "data_type": "int",
@@ -348,9 +360,10 @@ data = {
           }
         },
         "health_care_good_offering": {
-          "health_care_good_offering_id": {
+          "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "procedure_id": {
             "data_type": "int",
@@ -365,16 +378,17 @@ data = {
 
         },
         "provider_offering": {
-          "provider_offering_id": {
+          "id": {
             "data_type": "int",
-            "checkable": False
+            "checkable": False,
+            "constraint": "NOT NULL AUTO_INCREMENT"
           },
           "from_date": {
-            "data_type": "\"varchar(255)\"",
+            "data_type": "varchar(255)",
             "checkable": False
           },
           "thu_date": {
-            "data_type": "\"varchar(255)\"",
+            "data_type": "varchar(255)",
             "checkable": False
           }
         },
