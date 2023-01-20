@@ -1,5 +1,19 @@
 <RCC>
   <qresource prefix="all_icons">
+    <file>icons/icons8-logout-64.png</file>
+    <file>icons/icons8-setting-64.png</file>
+    <file>icons/icons8-home-page-48.png</file>
+    <file>icons/icons8-home-page-64.png</file>
+    <file>icons/home-page.png</file>
+    <file>icons/4725681.png</file>
+    <file>icons/8105418.png</file>
+    <file>icons/747846.png</file>
+    <file>icons/5619290.png</file>
+    <file>icons/3942534.png</file>
+    <file>icons/4122925.png</file>
+    <file>icons/9261197.png</file>
+    <file>icons/3031718.png</file>
+    <file>icons/7945189.png</file>
     <file>icons/121585-computer-programming.gif</file>
     <file>icons/3237472.png</file>
   </qresource>

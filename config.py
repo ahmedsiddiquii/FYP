@@ -7,7 +7,7 @@ def mysqlconnect():
         conn = pymysql.connect(
             host='localhost',
             user='root',
-            password="Ahmed12345@",
+            password="Ahmed12345",
             db='test',
         )
     except:
