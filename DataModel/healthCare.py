@@ -10,7 +10,9 @@ data = {
           },
           "indivitual_health_care": {
             "data_type": "bool",
-            "checkable": True
+            "checkable": True,
+            'UItype' : 2,
+            "Uiname" : "indivitual heaklth care"
           },
           "employee": {
             "data_type": "bool",
