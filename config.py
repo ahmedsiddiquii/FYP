@@ -1,21 +1,43 @@
 import pymysql
 
 
-def mysqlconnect():
+def mysqlconnect(username = None,password = None,host = None,port = None,dbname = None):
     # To connect MySQL database
-    try:
+    if username == None:
         conn = pymysql.connect(
             host='localhost',
             user='root',
-            password="Ahmed12345",
-            db='test',
+            password="12345678",
+            db="test"
         )
-    except:
-        conn = pymysql.connect(
-            host='localhost',
-            user='root',
-            password="Ahmed12345@",
-        )
+    else:
+        try:
+            conn = pymysql.connect(
+                host= host,
+                user= username,
+                password= password,
+                db= dbname,
+            )
+        except:
+            conn = pymysql.connect(
+                host=host,
+                user=username,
+                password=password
+
+            )
+            q = f"CREATE DATABASE {dbname}"
+            cursor = conn.cursor()
+            cursor.execute(q)
+            conn.commit()
+
+            conn = pymysql.connect(
+                host=host,
+                user=username,
+                password=password,
+                db=dbname,
+            )
+
+
     return conn
 
     # cur = conn.cursor()

@@ -383,7 +383,7 @@ background:transparent;</string>
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="currentIndex">
-          <number>6</number>
+          <number>7</number>
          </property>
          <widget class="QWidget" name="page">
           <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1100,7 +1100,7 @@ padding:6px;</string>
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>1067</width>
+                     <width>724</width>
                      <height>243</height>
                     </rect>
                    </property>
@@ -1635,8 +1635,8 @@ background : rgb(68, 100, 255);
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1126</width>
-                   <height>313</height>
+                   <width>374</width>
+                   <height>177</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout" rowstretch="0" rowminimumheight="0">
@@ -1752,8 +1752,8 @@ background : rgb(68, 100, 255);
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>310</width>
-                          <height>181</height>
+                          <width>136</width>
+                          <height>124</height>
                          </rect>
                         </property>
                         <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2057,7 +2057,7 @@ border-radius:9px;</string>
                <number>20</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame_23">
+               <widget class="QFrame" name="scrollArea_4">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -2198,7 +2198,7 @@ border-radius:6px;
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_24">
+               <widget class="QFrame" name="scrollArea_5">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -2330,7 +2330,7 @@ border-radius:6px;
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_25">
+               <widget class="QFrame" name="scrollArea_6">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -3555,7 +3555,7 @@ padding:6px;
                 </property>
                </widget>
               </item>
-              <item>
+              <item alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_31">
                 <property name="text">
                  <string/>

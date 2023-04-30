@@ -12,6 +12,7 @@ class QueryGenerator:
         for i in self.data:
             self.database_name=i
             break
+        print("db name",self.database_name)
         return self.database_name
     def define_entities(self):
         for entity in self.data[self.database_name]:
@@ -72,10 +73,10 @@ class QueryGenerator:
             query=query.replace(",)",")")
             queries.append(query)
         return queries
-    def generate_sub_tables(self):
+    def generate_sub_tables(self, username,password,host,port,dbname):
         queries= self.write_sub_entity_query()
         print(len(queries))
-        conn = mysqlconnect()
+        conn = mysqlconnect(username,password,host,port,dbname)
         cursor=conn.cursor()
         for query in queries:
             try:
@@ -86,10 +87,10 @@ class QueryGenerator:
                 print(e)
                 print("\n")
                 pass
-    def generate_main_tables(self):
+    def generate_main_tables(self, username,password,host,port,dbname):
         queries= self.write_main_entity_query()
         print(len(queries))
-        conn = mysqlconnect()
+        conn = mysqlconnect(username,password,host,port,dbname)
         cursor=conn.cursor()
         for query in queries:
             try:
@@ -101,12 +102,12 @@ class QueryGenerator:
                 print("\n")
                 pass
 
-obj=QueryGenerator()
-print(obj.define_db_name())
-print(obj.define_entities())
-print(obj.define_sub_entities())
-obj.generate_sub_tables()
-obj.generate_main_tables()
+# obj=QueryGenerator()
+# print(obj.define_db_name())
+# print(obj.define_entities())
+# print(obj.define_sub_entities())
+# obj.generate_sub_tables("root","12345678","localhost","3306","fyp3")
+# obj.generate_main_tables("root","12345678","localhost","3306","fyp3")
 # obj.write_sub_entity_query()
 # obj.write_main_entity_query()
 # print(obj.main_entities)
