@@ -4,12 +4,20 @@ import pymysql
 def mysqlconnect(username = None,password = None,host = None,port = None,dbname = None):
     # To connect MySQL database
     if username == None:
-        conn = pymysql.connect(
-            host='localhost',
-            user='root',
-            password="12345678",
-            db="test"
-        )
+        try:
+            conn = pymysql.connect(
+                host='localhost',
+                user='root',
+                password="12345678",
+                db="test"
+            )
+        except:
+            conn = pymysql.connect(
+                host='localhost',
+                user='root',
+                password="Ahmed12345",
+                db="AutomativeDatabse"
+            )
     else:
         try:
             conn = pymysql.connect(
