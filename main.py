@@ -2045,9 +2045,19 @@ class MainWindow(QMainWindow):
                     temp[self.ui.label_4.text()][l.text()] = {}
             for k,key in enumerate(temp[self.ui.label_4.text()]):
                     for b in self.ui.buttons[k]:
-                            temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]] = {"checkable":b.isEnabled(),"checked":False,"data_type":b.text().split(" : ")[1]}
+                            try:
+                                    temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]] = {"checkable":b.isEnabled(),"checked":False,"data_type":b.text().split(" : ")[1],
+                                                                                                   "label":data["Domain"][domain_name][self.ui.label_4.text()][key][b.text().split(" : ")[0]]["label"],
+
+                                                                                                   "type":data["Domain"][domain_name][self.ui.label_4.text()][key][b.text().split(" : ")[0]]["type"]}
+                            except:
+                                    temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]] = {
+                                            "checkable": b.isEnabled(), "checked": False,
+                                            "data_type": b.text().split(" : ")[1]}
                             if b.isChecked()==True:
                                     temp[self.ui.label_4.text()][key][b.text().split(" : ")[0]]["checked"]=True
+                            # print(data["Domain"][domain_name][self.ui.label_4.text()])
+                            # print(data["Domain"][domain_name][self.ui.label_4.text()][key][b.text().split(" : ")[0]])
 
             #
             #print(len(self.ui.buttons),"===buttons")

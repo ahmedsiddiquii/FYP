@@ -6,288 +6,208 @@
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "last_name": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "Last Name",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "first_name": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "first Name",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "middle_name": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "middle Name",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "personal_title": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Personal title",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "suffix": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "suffix",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "nickname": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "nickname",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "gender": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Gender",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "birthdate": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Birth Date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "height": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Height",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "weight": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Weight",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "mother_maiden_name": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Mother maiden Name",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "maritial_status": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Martial status",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "social_security_no": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Social Security No",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "passport_no": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Passport No",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "passport_expire_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Passport Expire Date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "total_year_work_experience": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Total year work experience",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "comment": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "comment",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "country": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "country",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "citizenship": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Citizenship",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "person_role": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "indivitual_health_care": {
             "checkable": true,
-            "checked": true,
-            "data_type": "bool",
-            "label": "Individual Health Care",
-            "type": 2
+            "checked": false,
+            "data_type": "bool"
           },
           "employee": {
             "checkable": true,
-            "checked": true,
-            "data_type": "bool",
-            "label": "Employee",
-            "type": 2
+            "checked": false,
+            "data_type": "bool"
           },
           "contract": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "contact",
-            "type": 2
+            "data_type": "bool"
           },
           "patient": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Patient",
-            "type": 2
+            "data_type": "varchar(255)"
           }
         },
         "insured_party": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "insured_indivitual": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Insured Individual",
-            "type": 2
+            "data_type": "bool"
           },
           "insured_organization": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Insured Organization",
-            "type": 2
+            "data_type": "bool"
           }
         },
         "organization_role": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "Health Care Provider Organization": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Health Care Provider Organization",
-            "type": 2
+            "data_type": "datetime"
           },
           "Organization Unit": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Organization Unit",
-            "type": 2
+            "data_type": "datetime"
           },
           "Internal Organization": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Internal Organization",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "groupp": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Group",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "Employer": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Employer",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "Network": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Network",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "Supplier": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Supplier",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "Third Party": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Third Party",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "Insurance Provider": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Insurance Provider",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "Payor": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Payor",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "InternalOrganization1": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Internal Organization",
-            "type": 2
+            "data_type": "varchar(255)"
           }
         }
       }
@@ -298,195 +218,141 @@
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "item_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "Item ID",
-            "type": 1
+            "data_type": "int"
           },
           "quantity": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "Quantity",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "price": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "Price",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "order_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Order Date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "order_type": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Order Type",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "product": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Product",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "agreement_item": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "item_seq_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "Item Sequence ID",
-            "type": 1
+            "data_type": "int"
           },
           "text": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Text",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "image": {
             "checkable": false,
             "checked": false,
-            "data_type": "blob",
-            "label": "Image",
-            "type": 1
+            "data_type": "blob"
           },
           "pricing_program": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Pricing Program",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "sub_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Sub Agreement",
-            "type": 2
+            "data_type": "bool"
           },
           "agreement_exhibit": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Agreement exhibit",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "main_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "boolean",
-            "label": "Main Agreement",
-            "type": 2
+            "data_type": "boolean"
           },
           "agreement_section": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Agreement section",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "agreement": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 2
+            "data_type": "int"
           },
           "patient_provider_agreement": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "Patient Provider Agreement",
-            "type": 2
+            "data_type": "int"
           },
           "date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "from_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "From Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "thru_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Thru Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "description": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "description",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "employee_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Employee Agreement",
-            "type": 2
+            "data_type": "bool"
           },
           "purchase_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "boolean",
-            "label": "Purchase Agreement",
-            "type": 2
+            "data_type": "boolean"
           },
           "provider_network_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Provider Network Agreement",
-            "type": 2
+            "data_type": "bool"
           },
           "other_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Other Agreement",
-            "type": 1
+            "data_type": "bool"
           },
           "insuarance_policy": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Insurance Policy",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "agreement_role": {},
@@ -495,99 +361,73 @@
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "type_id": {
             "checkable": true,
             "checked": false,
-            "data_type": "int",
-            "label": "Type ID",
-            "type": 1
+            "data_type": "int"
           },
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Description",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "party_relations": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "from_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "From Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "thru_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Thru Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "comments": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Comment",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "party_role": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "role_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Role ID",
-            "type": 1
+            "data_type": "datetime"
           }
         },
         "party": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "party_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Party ID",
-            "type": 1
+            "data_type": "datetime"
           },
           "person": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Person",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "organization": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Organization",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         }
       }
@@ -603,158 +443,114 @@
           "name": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "name",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "intro_date": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "intro date",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "sale_discontinuation_date": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "sale discontinious date",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "support_discontinuation_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "support discontinious date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "comment": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "comment",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "health": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "health",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "category",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "color": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "color",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "quality": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "quality",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "brand_name": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "brand name",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "rating": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "rating",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "supplier": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "supplier",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "category": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "category_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "Category ID",
-            "type": 1
+            "data_type": "int"
           },
           "discription": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "Description",
-            "type": 2
+            "data_type": "int"
           },
           "hospital_category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "hospital Category",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "dental_category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Dental Category",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "physician_ category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Physician Category",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "vision_category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Vision Category",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "alternative_med_category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Alternative Med Category",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "other_healthcare_category": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Other Healthcare Category",
-            "type": 2
+            "data_type": "varchar(255)"
           },
           "agreement_section": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Agreement Section",
-            "type": 2
+            "data_type": "varchar(255)"
           }
         },
         "category_offering": {},
@@ -762,125 +558,91 @@
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "health_care_offering_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "HealthCare Offering ID",
-            "type": 1
+            "data_type": "int"
           },
           "name": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Name",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "from_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "From Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "thru_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "datetime",
-            "label": "Thru Date",
-            "type": 1
+            "data_type": "datetime"
           },
           "description": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Description",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "employee_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Employee Agreement",
-            "type": 2
+            "data_type": "bool"
           },
           "purchase_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "boolean",
-            "label": "Purchase Agreement",
-            "type": 2
+            "data_type": "boolean"
           },
           "provider_network_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Provider Network Agreement",
-            "type": 2
+            "data_type": "bool"
           },
           "other_agreement": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "Other Agreement",
-            "type": 2
+            "data_type": "bool"
           },
           "insuarance_policy": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Insurance Policy",
-            "type": 2
+            "data_type": "varchar(255)"
           }
         },
         "health_care_service_offering": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "procedure_id": {
             "checkable": true,
             "checked": false,
-            "data_type": "int",
-            "label": "Procedure ID",
-            "type": 1
+            "data_type": "int"
           },
           "other_healt_care_offering": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Other Health Care Offering",
-            "type": 2
+            "data_type": "varchar(255)"
           }
         },
         "health_care_good_offering": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "procedure_id": {
             "checkable": true,
             "checked": false,
-            "data_type": "int",
-            "label": "Procedure ID",
-            "type": 1
+            "data_type": "int"
           },
           "other_healt_care_offering": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Other Health Care Offering",
-            "type": 2
+            "data_type": "varchar(255)"
           }
         },
         "inventory_item": {},
@@ -888,23 +650,17 @@
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "from_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "From Date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "thu_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "thru Date",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "health_care_provider_organization": {}
@@ -916,175 +672,129 @@
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "quantity": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "ID",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "inventory_item": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "Inventory Item",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "status": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "status",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "status_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "status Date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "order_id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "Order ID",
-            "type": 1
+            "data_type": "int"
           }
         },
         "healthcare_delivery": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "from_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "date",
-            "label": "From Date",
-            "type": 1
+            "data_type": "date"
           },
           "thru_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "date",
-            "label": "Thru Date",
-            "type": 1
+            "data_type": "date"
           },
           "notes": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Notes",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "symptoms": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "description_id": {
             "checkable": true,
             "checked": false,
-            "data_type": "int",
-            "label": "Description ID",
-            "type": 1
+            "data_type": "int"
           }
         },
         "symptom_type": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Description",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "healthcare_episode": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "episode_create_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "date",
-            "label": "Episode Create Date",
-            "type": 1
+            "data_type": "date"
           },
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Description",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "incident": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "date": {
             "checkable": true,
             "checked": false,
-            "data_type": "date",
-            "label": "Date",
-            "type": 1
+            "data_type": "date"
           },
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "ID",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "mpl_related_ind": {
             "checkable": true,
             "checked": false,
-            "data_type": "bool",
-            "label": "MPL Related Ind",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "incident_type": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "Description",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "visit_reason": {
@@ -1096,102 +806,78 @@
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "description",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "health_care_visit": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ID",
-            "type": 1
+            "data_type": "int"
           },
           "from_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "date",
-            "label": "From Date",
-            "type": 1
+            "data_type": "date"
           },
           "thru_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "date",
-            "label": "thru Date",
-            "type": 1
+            "data_type": "date"
           }
         },
         "patient": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "patient id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "episode_type": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "episode ID",
-            "type": 1
+            "data_type": "int"
           }
         },
         "health_care_visit_role": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "health care visit role id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "health_care_visit_role_type": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "health care role visit type",
-            "type": 1
+            "data_type": "int"
           }
         },
         "party": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "party id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "health_care_visit_status": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "party id",
-            "type": 1
+            "data_type": "int"
           },
           "status_datetime": {
             "checkable": false,
             "checked": false,
-            "data_type": "DATETIME",
-            "label": "health care visit status",
-            "type": 1
+            "data_type": "DATETIME"
           }
         },
         "health_care_visit_status_type": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "health visit status type",
-            "type": 1
+            "data_type": "int"
           }
         },
         "postal_address": {
@@ -1203,23 +889,17 @@
           "address_1": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "address 1",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "address_2": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "address 2",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "directions": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "direction",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "facility": {
@@ -1231,54 +911,42 @@
           "description": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "discription",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "hospital": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "hospital id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "medical_office": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "medical office id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "clinic": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "clinic id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "ambulatory_surgery_center": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "ambulatory surgery center id",
-            "type": 1
+            "data_type": "int"
           }
         },
         "other_healthcare_facility": {
           "id": {
             "checkable": false,
             "checked": false,
-            "data_type": "int",
-            "label": "other healthcare facility",
-            "type": 1
+            "data_type": "int"
           }
         }
       }
@@ -1294,58 +962,42 @@
           "invoice_date": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "invoice date",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "message": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "message",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "description": {
             "checkable": true,
-            "checked": true,
-            "data_type": "varchar(255)",
-            "label": "description",
-            "type": 1
+            "checked": false,
+            "data_type": "varchar(255)"
           },
           "product": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "product",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "quantity": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "quantity",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "price": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "price",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "tax": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "tax",
-            "type": 1
+            "data_type": "varchar(255)"
           },
           "address": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar(255)",
-            "label": "address",
-            "type": 1
+            "data_type": "varchar(255)"
           }
         },
         "healthcare_delivery_claim_submission": {
@@ -1357,9 +1009,7 @@
           "claim_submission": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "claim submissin",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "claim_settlement": {
@@ -1371,9 +1021,7 @@
           "date_settled": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "date settled",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "claim_settlement_amount": {
@@ -1385,9 +1033,7 @@
           "Amount": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "Amount",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "claim_item": {
@@ -1399,16 +1045,12 @@
           "amount": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "amount",
-            "type": 1
+            "data_type": "bool"
           },
           "quantity": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "quantity",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "payment": {
@@ -1420,30 +1062,22 @@
           "effective_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "effective date",
-            "type": 1
+            "data_type": "bool"
           },
           "payment_ref_num": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "payment reference num",
-            "type": 1
+            "data_type": "bool"
           },
           "amount": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "amount",
-            "type": 1
+            "data_type": "bool"
           },
           "comment": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "comment",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "healthcare_delivery": {
@@ -1455,9 +1089,7 @@
           "delivery_notes": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "delivery notes",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "unit_of_measure": {
@@ -1469,16 +1101,12 @@
           "abbreviation": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "abbreviation",
-            "type": 1
+            "data_type": "bool"
           },
           "description": {
             "checkable": false,
             "checked": false,
-            "data_type": "bool",
-            "label": "description",
-            "type": 1
+            "data_type": "bool"
           }
         },
         "claim": {
@@ -1490,16 +1118,12 @@
           "submission_date": {
             "checkable": false,
             "checked": false,
-            "data_type": "DATETIME",
-            "label": "submission date",
-            "type": 1
+            "data_type": "DATETIME"
           },
           "claim_type": {
             "checkable": true,
             "checked": false,
-            "data_type": "varchar",
-            "label": "claim date",
-            "type": 1
+            "data_type": "varchar"
           }
         },
         "claim_status": {
@@ -1511,9 +1135,7 @@
           "date_time": {
             "checkable": false,
             "checked": false,
-            "data_type": "DATETIME",
-            "label": "date ",
-            "type": 1
+            "data_type": "DATETIME"
           }
         },
         "claim_status_type": {
