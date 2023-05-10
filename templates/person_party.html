@@ -258,6 +258,7 @@ section{
                    <h3>person_detail</h3>
                </legend>
                <div class="personal-details">
+                   
                    <div>
                        
                        
@@ -378,6 +379,22 @@ section{
                        
                        
                        
+                       <div style="margin-left: 20%; margin-right: 20%">
+                           <label style="text-align: left; width: 30%;">Weight</label>
+                           <input type="text" name="name" required style="text-align: left; width: 70%;">
+                       </div>
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       <div style="margin-left: 20%; margin-right: 20%">
+                           <label style="text-align: left; width: 30%;">Mother maiden Name</label>
+                           <input type="text" name="name" required style="text-align: left; width: 70%;">
+                       </div>
+                       
                        
                        
                        
@@ -407,6 +424,7 @@ section{
                        
                        
                    </div>
+                   
                </div>
            </fieldset>
            
@@ -415,54 +433,57 @@ section{
                    <h3>person_role</h3>
                </legend>
                <div class="personal-details">
+                   
                    <div>
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">ID</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="ID" value="ID">
+                       <table id="myTable">
+                          <thead>
+                            <tr>
 
+                                <th>ID</th>
+                                <th>person_role_type</th>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Employee</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Employee" value="Employee">
+                            </tr>
 
+                          </thead>
+                          <tbody>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">contact</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="contact" value="contact">
+                              <tr>
+                                <td>
+                                    <input>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      
+                                        
+                                      
+                                        ;
+                                        <option>indivitual_health_care</option>
+                                        
+                                      
+                                        ;
+                                        <option>employee</option>
+                                        
+                                      
+                                        ;
+                                        <option>contract</option>
+                                        
+                                      
+                                        ;
+                                        <option>patient</option>
+                                        
+                                      
+                                    </select>
+                                  </td>
 
+                              </tr>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
+                          </tbody>
+
+                        </table>
+                       <button style="width:100px;" onclick="addRow()">Add More</button>
+
                    </div>
+                   
                </div>
            </fieldset>
            
@@ -471,6 +492,7 @@ section{
                    <h3>insured_party</h3>
                </legend>
                <div class="personal-details">
+                   
                    <div>
                        
                        
@@ -513,6 +535,7 @@ section{
                        
                        
                    </div>
+                   
                </div>
            </fieldset>
            
@@ -521,169 +544,85 @@ section{
                    <h3>organization_role</h3>
                </legend>
                <div class="personal-details">
+                   
                    <div>
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">ID</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="ID" value="ID">
+                       <table id="myTable">
+                          <thead>
+                            <tr>
 
+                                <th>ID</th>
+                                <th>organization_role_type</th>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Health Care Provider Organization</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Health Care Provider Organization" value="Health Care Provider Organization">
+                            </tr>
 
+                          </thead>
+                          <tbody>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Organization Unit</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Organization Unit" value="Organization Unit">
+                              <tr>
+                                <td>
+                                    <input>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      
+                                        
+                                      
+                                        ;
+                                        <option>Health Care Provider Organization</option>
+                                        
+                                      
+                                        ;
+                                        <option>Organization Unit</option>
+                                        
+                                      
+                                        ;
+                                        <option>Internal Organization</option>
+                                        
+                                      
+                                        ;
+                                        <option>groupp</option>
+                                        
+                                      
+                                        ;
+                                        <option>Employer</option>
+                                        
+                                      
+                                        ;
+                                        <option>Network</option>
+                                        
+                                      
+                                        ;
+                                        <option>Supplier</option>
+                                        
+                                      
+                                        ;
+                                        <option>Third Party</option>
+                                        
+                                      
+                                        ;
+                                        <option>Insurance Provider</option>
+                                        
+                                      
+                                        ;
+                                        <option>Payor</option>
+                                        
+                                      
+                                        ;
+                                        <option>InternalOrganization1</option>
+                                        
+                                      
+                                    </select>
+                                  </td>
 
+                              </tr>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Internal Organization</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Internal Organization" value="Internal Organization">
+                          </tbody>
 
+                        </table>
+                       <button style="width:100px;" onclick="addRow()">Add More</button>
 
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Group</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Group" value="Group">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Employer</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Employer" value="Employer">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Network</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Network" value="Network">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Supplier</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Supplier" value="Supplier">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Third Party</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Third Party" value="Third Party">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Insurance Provider</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Insurance Provider" value="Insurance Provider">
-
-
-                       </div>
-                       
-                       
-                       
                    </div>
-                   <div>
-                       <!-- Do something if loop index equals 6 -->
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Payor</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Payor" value="Payor">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       <div style="margin-left: 20%; margin-right: 20%">
-                           <label  style="text-align: left; width: 30%;">Internal Organization</label>
-                               <input style= "text-align: left; width: 70%;" type="checkbox" name="Internal Organization" value="Internal Organization">
-
-
-                       </div>
-                       
-                       
-                       
-                       
-                   </div>
+                   
                </div>
            </fieldset>
            
@@ -692,3 +631,27 @@ section{
    </div>
 </body>
 </html>
+<script>
+  function addRow() {
+  // Get a reference to the table
+  var table = document.getElementById("myTable");
+
+          // Insert a new row at the end of the table
+          var newRow = table.insertRow(-1);
+
+          // Insert cells into the new row
+            var newCell1 = newRow.insertCell(-1)
+            newCell1.innerHTML = '
+            <input>';
+            var newCell2 = newRow.insertCell(-1);
+            newCell2.innerHTML = `
+
+              <select>
+                
+              </select>
+            `;
+
+
+}
+</script>
+

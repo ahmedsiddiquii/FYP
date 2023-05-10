@@ -159,7 +159,8 @@ data = {
             "checkable": True,
             "label": "Patient",
             "type": 2,
-          }
+          },
+
         },
         "insured_party": {
           "id": {

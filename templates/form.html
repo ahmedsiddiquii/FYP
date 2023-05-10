@@ -250,6 +250,43 @@ section{
                    <h3>{{ table }}</h3>
                </legend>
                <div class="personal-details">
+                   {% if table in relation %}
+                   <div>
+                       <table id="myTable">
+                          <thead>
+                            <tr>
+
+                                <th>ID</th>
+                                <th>{{ table }}_type</th>
+
+                            </tr>
+
+                          </thead>
+                          <tbody>
+
+                              <tr>
+                                <td>
+                                    <input>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      {% for field in tables[table] %}
+                                        {% if field!='id' %};
+                                        <option>{{ field }}</option>
+                                        {% endif %}
+                                      {% endfor %}
+                                    </select>
+                                  </td>
+
+                              </tr>
+
+                          </tbody>
+
+                        </table>
+                       <button style="width:100px;" onclick="addRow()">Add More</button>
+
+                   </div>
+                   {% else %}
                    <div>
                        {% for field in tables[table] %}
                        {% if (tables[table][field]['checkable']==True and tables[table][field]['checked']==True) or tables[table][field]['checkable']==False%}
@@ -275,6 +312,7 @@ section{
                        {% endif %}
                        {% endfor %}
                    </div>
+                   {% endif %}
                </div>
            </fieldset>
            {% endfor %}
@@ -283,4 +321,32 @@ section{
    </div>
 </body>
 </html>
+<script>
+  function addRow() {
+  // Get a reference to the table
+  var table = document.getElementById("myTable");
+
+          // Insert a new row at the end of the table
+          var newRow = table.insertRow(-1);
+
+          // Insert cells into the new row
+            var newCell1 = newRow.insertCell(-1)
+            newCell1.innerHTML = '
+            <input>';
+            var newCell2 = newRow.insertCell(-1);
+            newCell2.innerHTML = `
+
+              <select>
+                {% for field in tables[table] %}
+                                        {% if field!='id' %};
+                                        <option>{{ field }}</option>
+                                        {% endif %}
+                                      {% endfor %}
+              </select>
+            `;
+
+
+}
+</script>
+
 

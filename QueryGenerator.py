@@ -101,6 +101,10 @@ class QueryGenerator:
                 print(e)
                 print("\n")
                 pass
+        file=open("Output/Downloaded_Queries.txt","w")
+        for q in queries:
+            file.writelines(q+"\n")
+        file.close()
 
 # obj=QueryGenerator()
 # print(obj.define_db_name())

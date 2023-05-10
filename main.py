@@ -1918,6 +1918,7 @@ class MainWindow(QMainWindow):
         self.movie.start()
         self.movie2 = QMovie("icons/wizard2.gif")
         self.ui.label_27.setMovie(self.movie2)
+        self.ui.pushButton_15.setDisabled(True)
         self.movie2.start()
         self.set_shadow()
         self.ui.frame_6.hide()
