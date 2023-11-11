@@ -19,6 +19,17 @@ def mysqlconnect(username = None,password = None,host = None,port = None,dbname 
                 db="AutomativeDatabse"
             )
     else:
+        if dbname=='checking':
+            try:
+                conn = pymysql.connect(
+                    host=host,
+                    user=username,
+                    password=password,
+
+                )
+                return True
+            except:
+                return False
         try:
             conn = pymysql.connect(
                 host= host,

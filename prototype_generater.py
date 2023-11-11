@@ -1,7 +1,7 @@
 
 
-from jinja2 import Environment, FileSystemLoader
-import json
+        from jinja2 import Environment, FileSystemLoader
+        import json
 from DataModel.relations import many
 
 projectName = ""
@@ -39,7 +39,8 @@ def generate(key,key_data):
                   "navhColor": navBar_hColor,
                   "navbarItemText_color": navbarItemText_color,
                   "template_buttonColors": template_buttonColors,
-                    "relation":many}
+                    "relation":many,
+                    "feedback_messages":["e","f","s"]}
 
     # print(context)
     print(len(context['fields']))
@@ -47,28 +48,28 @@ def generate(key,key_data):
     with open(f"output/{key}.html", "w", encoding="utf-8") as file:
         file.write(rendered_template)
 
+def main_prototype():
+    # Open the file and load the JSON data
+    with open('data_list.txt', 'r') as f:
+        data = json.load(f)
 
-# Open the file and load the JSON data
-with open('data_list.txt', 'r') as f:
-    data = json.load(f)
+    for i in data:
+        projectName = i
+        for j in data[i]:
+            for k in j:
+                print(k)
+                keyList.append(k)
 
-for i in data:
-    projectName = i
-    for j in data[i]:
-        for k in j:
-            print(k)
-            keyList.append(k)
+    for l in data:
+        for m in data[l]:
+            print(m)
+            for k in m:
 
-for l in data:
-    for m in data[l]:
-        print(m)
-        for k in m:
-
-            if True:
-                generate(k, m[k])
-            if False:
-                # print(e)
-                pass
+                if True:
+                    generate(k, m[k])
+                if False:
+                    # print(e)
+                    pass
 
 #for i in data["hospitalManagement"]:
 

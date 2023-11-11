@@ -60,7 +60,7 @@ class QueryGenerator:
         queries = []
         for entity in self.main_entities:
             fk = []
-            query = "CREATE TABLE " + entity + " ("
+            query = "CREATE TABLE " + entity + " (id INT NOT NULL AUTO_INCREMENT,"
             for attribute in self.main_entities[entity]:
                 attribute_data =  self.main_entities[entity][attribute]
                 query += attribute.casefold().replace(" ", "_") + " " + attribute_data['data_type'] + ","
@@ -87,6 +87,10 @@ class QueryGenerator:
                 print(e)
                 print("\n")
                 pass
+        file = open("Output/Downloaded_Queries.txt", "w")
+        for q in queries:
+            file.writelines(q + "\n")
+        file.close()
     def generate_main_tables(self, username,password,host,port,dbname):
         queries= self.write_main_entity_query()
         print(len(queries))
@@ -101,7 +105,7 @@ class QueryGenerator:
                 print(e)
                 print("\n")
                 pass
-        file=open("Output/Downloaded_Queries.txt","w")
+        file=open("Output/Downloaded_Queries.txt","a")
         for q in queries:
             file.writelines(q+"\n")
         file.close()
